@@ -4,6 +4,8 @@
  */
 package lab.pkg5control.de.nominas;
 
+import java.util.Vector;
+
 /**
  *
  * @author UCC
