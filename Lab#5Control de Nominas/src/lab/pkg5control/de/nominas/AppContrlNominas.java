@@ -15,6 +15,8 @@ public class AppContrlNominas{
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        frmVentanaPrincipal frmPrinsipal = new frmVentanaPrincipal();
+        frmPrinsipal.setVisible(true);
     }
     
 }

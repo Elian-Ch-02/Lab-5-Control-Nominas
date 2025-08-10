@@ -10,7 +10,7 @@ package lab.pkg5control.de.nominas;
  */
 public class Empleado {
     private String nombre;
-    private String apellido;
+    private String apellidos;
     private double salarioDia;
     private double otrosIngresos;
     private double pagoCCSS;
@@ -21,7 +21,7 @@ public class Empleado {
     
     public Empleado(String nomnre, String apellido, double salarioDia, double otrosIngresos, double pagoCCSS, double aportePensiones, int diasTrabajados, TipoCargo cargo, TipoGenero Genero){
         this.nombre = nomnre;
-        this.apellido = apellido;
+        this.apellidos = apellidos;
         this.salarioDia = salarioDia;
         this.otrosIngresos = otrosIngresos;
         this.pagoCCSS = pagoCCSS;
@@ -35,7 +35,7 @@ public class Empleado {
         return nombre;
     }
     public String getApellidos(){
-        return apellido;
+        return apellidos;
     }
     public double getSalarioDia(){
         return salarioDia;
