@@ -112,6 +112,11 @@ public class frmAgregarEmpleados extends javax.swing.JFrame {
         btnBorrar.setText("Borrar");
         btnBorrar.setContentAreaFilled(false);
         btnBorrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBorrarActionPerformed(evt);
+            }
+        });
 
         btnAgregar.setText("Agregar");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -289,6 +294,10 @@ public class frmAgregarEmpleados extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Campo nulo o error en formato de numero" , "Error", JOptionPane.INFORMATION_MESSAGE, null);
         }
     }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarActionPerformed
 
     /**
      * @param args the command line arguments
