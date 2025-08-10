@@ -28,41 +28,7 @@ public class frmVentanaPrincipal extends javax.swing.JFrame {
         lista = new ListaEmpleados();
     }
     
-    private void actionPerformed(java.awt.event.ActionEvent evt){
-          if (evt.getSource() == mniAgregarEmpleado){
-            frmAgregarEmpleados frmAgregar = new frmAgregarEmpleados(lista);
-            frmAgregar.setVisible(true);
-        }else if (evt.getSource() == mniCalcularNomina){
-            frmCalcularNomina frmCalcular = new frmCalcularNomina(lista);
-            frmCalcular.setVisible(true);
-        }else if (evt.getSource() == JMenuBar1){
-            JFileChooser fc = new JFileChooser();
-            fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-            
-            int respuesta = fc.showOpenDialog(this);
-            
-            if(respuesta == JFileChooser.APPROVE_OPTION){
-                File directorioElegido = fc.getSelectedFile();
-                String nombre = directorioElegido.getName();
-                try{
-                    String contenido = lista.convertirTexto();
-                    
-                    File file = new File(nombre + "||" + "Nomina.txt");
-                    file.createNewFile();
-                    FileWriter fw = new FileWriter(file);
-                    BufferedWriter bw = new BufferedWriter(fw);
-                    
-                    bw.write(contenido);
-                    bw.close();
-                    String texto = "El archivo de la Nomina.txt se ha creado en " + nombre;
-                    JOptionPane.showMessageDialog(this, texto, "mensaje", JOptionPane.INFORMATION_MESSAGE);
-                }catch(Exception e){
-                    e.printStackTrace();
-                }
-            }
-        }
-    }
-
+  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -156,6 +122,38 @@ public class frmVentanaPrincipal extends javax.swing.JFrame {
 
     private void JMenuBar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMenuBar1ActionPerformed
         // TODO add your handling code here:
+        if (evt.getSource() == mniAgregarEmpleado){
+            frmAgregarEmpleados frmAgregar = new frmAgregarEmpleados(lista);
+            frmAgregar.setVisible(true);
+        }else if (evt.getSource() == mniCalcularNomina){
+            frmCalcularNomina frmCalcular = new frmCalcularNomina(lista);
+            frmCalcular.setVisible(true);
+        }else if (evt.getSource() == JMenuBar1){
+            JFileChooser fc = new JFileChooser();
+            fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            
+            int respuesta = fc.showOpenDialog(this);
+            
+            if(respuesta == JFileChooser.APPROVE_OPTION){
+                File directorioElegido = fc.getSelectedFile();
+                String nombre = directorioElegido.getName();
+                try{
+                    String contenido = lista.convertirTexto();
+                    
+                    File file = new File(nombre + "||" + "Nomina.txt");
+                    file.createNewFile();
+                    FileWriter fw = new FileWriter(file);
+                    BufferedWriter bw = new BufferedWriter(fw);
+                    
+                    bw.write(contenido);
+                    bw.close();
+                    String texto = "El archivo de la Nomina.txt se ha creado en " + nombre;
+                    JOptionPane.showMessageDialog(this, texto, "mensaje", JOptionPane.INFORMATION_MESSAGE);
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
     }//GEN-LAST:event_JMenuBar1ActionPerformed
 
     /**
